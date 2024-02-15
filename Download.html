@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cthulu.com/Engine</title>
+    <style>
+        /* Basic overall body styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+            background-color: #f0f0f0; /* Light mode background color */
+            color: #333; /* Light mode text color */
+        }
+
+        /* Header Styles */
+        header {
+            background-image: linear-gradient(to right, #1ac6dd, #6700d5);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            height: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            padding: 7px 14px;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: rgba(163, 0, 223, 0.614);
+        }
+
+        /* Dark Mode Button */
+        .theme-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: auto;
+            background-color: #555;
+            color: white;
+        }
+
+        /* Main content styles, ensuring it doesn't overlap with the fixed footer */
+        main {
+            padding-bottom: 60px; /* Adjust based on footer height */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode nav a, .dark-mode footer {
+            color: #ddd;
+        }
+
+        .dark-mode header {
+            background-image: linear-gradient(to right, #555, #888);
+        }
+
+        main {
+        display: flex; /* This makes the main container a flex container */
+        justify-content: center; /* This centers the children horizontally */
+        align-items: center; /* This centers the children vertically */
+        flex-wrap: wrap; /* This allows items to wrap in case of small screen sizes */
+        gap: 20px; /* This adds space between the flex items */
+        padding-bottom: 60px; /* Adjusted to avoid overlap with the footer */
+    }
+
+    .download-section, .source-code-section {
+        display: flex; /* Makes these divs also flex containers */
+        flex-direction: column; /* Aligns the img and button in a column */
+        align-items: center; /* Centers the items horizontally in the flex container */
+        text-align: center; /* Centers the text inside the button */
+    }
+
+    /* Adjust the size of images if necessary */
+    .download-section img, .source-code-section img {
+        max-width: 100%; /* Ensures images are responsive */
+        height: auto; /* Maintains the aspect ratio */
+    }
+
+    button {
+        margin-top: 10px; /* Adds a little space above the button */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        main {
+            flex-direction: column;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://gcdnb.pbrd.co/images/uZ4mXriscaYW.png?o=1" alt="Logo" class="logo" onclick="window.location.href = 'https://example.com'">
+    <nav>
+        <a href="/Cthulu/Home.html">Home</a>
+        <a href="/Cthulu/Download.html">Download</a>
+        <a href="/Cthulu/About.html">About</a>
+        <a href="/Cthulu/Contact.html">Contact</a>
+    </nav>
+    
+    <button class="theme-toggle">Toggle Dark/Light Mode</button>
+</header>
+
+<main>
+    <!-- Main content adjusted for scrollbar visibility -->
+    <div class="download-section">
+        <img src="https://gcdnb.pbrd.co/images/nUJeDxCGwMRB.png?o=1" alt="Download Cthulu" />
+        <button onclick="window.location.href = 'https://example.com/download-kraken'">Download Cthulu</button>
+    </div>
+    <div class="source-code-section">
+        <img src="https://gcdnb.pbrd.co/images/vEYynHjYlZep.png?o=1" alt="Add Octo" />
+        <button onclick="window.location.href = 'https://example.com/get-source-code'">Download Octo</button>
+    </div>
+</main>
+
+<footer>
+    <!-- Footer content ensuring it doesn't overlap with main content -->
+    <p>&copy; Website Scripted And Programmed by Mr.AsteRisk      ---       Copyright! --2024 Cthulu™ Game Engine</p>
+</footer>
+
+<script>
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+</body>
+</html>

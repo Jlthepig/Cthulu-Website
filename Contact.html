@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cthulu.com/Engine</title>
+    <style>
+
+        /* Basic overall body styles go here*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Header Styles go here */
+        header {
+            background-image: linear-gradient(to right, #1ac6dd, #6700d5);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            height: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px; /* Adds just 10 pixels of spacing between nav buttons */
+            padding: 7px 14px;
+            border-radius: 15px; /* Rounded corners */
+            transition: background-color 0.3s;
+            display: inline-block; /* Ensures to force spacing thus spacing and padding are always applied */
+        }
+
+        nav a:hover {
+            background-color: rgba(163, 0, 223, 0.614);
+        }
+
+        /* Dark Mode Button */
+        .theme-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: auto;
+            background-color: #555;
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode nav a {
+            color: #ddd;
+        }
+
+        .dark-mode header {
+            background-image: linear-gradient(to right, #555, #888);
+        }
+    </style>
+</head>
+<body>
+
+<header>           <!-- add and replace your website logo image below here this would be the image for kraken.com-->
+    <img src="https://gcdnb.pbrd.co/images/uZ4mXriscaYW.png?o=1" alt="Logo" class="logo" onclick="window.location.href = 'https://example.com'">
+
+
+    
+     <!-- leave this area as is otherwise contact me first before changing if this seems to break and ill help-->
+     <nav>
+        <a href="/Cthulu/Home.html">Home</a>
+        <a href="/Cthulu/Download.html">Download</a>
+        <a href="/Cthulu/About.html">About</a>
+        <a href="/Cthulu/Contact.html">Contact</a>
+    </nav>
+    
+    
+    <button class="theme-toggle">Toggle Dark/Light Mode</button>
+</header>
+
+<main>
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, please feel free to contact us:</p>
+        <ul>
+            <li><a href="https://github.com/LordManjush" target="_blank">Visit My GitHub</a></li>
+        </ul>
+    </section>
+    
+    
+    <section class="google-map">
+        <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d737.4750053303853!2d24.253958117723496!3d-30.905694235592076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e1!3m2!1sen!2sus!4v1708030507854!5m2!1sen!2sus" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; Website Scripted And Programmed by Mr.AsteRisk      ---       Copyright! --2024 Cthulu™ Game Engine</p>
+</footer>
+
+<script>
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+</body>
+</html>

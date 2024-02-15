@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cthulu.com/Engine</title>
+    <style>
+
+        /* Basic overall body styles go here*/
+        body {
+            margin: 0;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Header Styles go here */
+        header {
+            background-image: linear-gradient(to right, #1ac6dd, #6700d5);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            height: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px; /* Adds just 10 pixels of spacing between nav buttons */
+            padding: 7px 14px;
+            border-radius: 15px; /* Rounded corners */
+            transition: background-color 0.3s;
+            display: inline-block; /* Ensures to force spacing thus spacing and padding are always applied */
+        }
+
+        nav a:hover {
+            background-color: rgba(163, 0, 223, 0.614);
+        }
+
+        /* Dark Mode Button */
+        .theme-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: auto;
+            background-color: #555;
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode nav a {
+            color: #ddd;
+        }
+
+        .dark-mode header {
+            background-image: linear-gradient(to right, #555, #888);
+        }
+
+        h1, h2, h3 {
+            padding: 0px;
+            width: 100%; /* Ensures the element spans the full width */
+            white-space: pre-wrap; /* Allows for natural text wrapping while respecting whitespace */
+            
+        }
+        h1 {
+            margin-bottom: 20px; /* Adds space below the h1 element */
+        }
+        h2 {
+            margin-bottom: 10px; /* Adds space below the h2 element */
+            text-align: justify; /* Justifies the text for a more professional appearance (you can only use this once) */
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>           <!-- add and replace your website logo image below here this would be the image for kraken.com-->
+    <img src="https://gcdnb.pbrd.co/images/uZ4mXriscaYW.png?o=1" alt="Logo" class="logo" onclick="window.location.href = 'https://example.com'">
+
+
+    
+     <!-- leave this area as is otherwise contact me first before changing if this seems to break and ill help-->
+     <nav>
+        <a href="/Cthulu/Home.html">Home</a>
+        <a href="/Cthulu/Download.html">Download</a>
+        <a href="/Cthulu/About.html">About</a>
+        <a href="/Cthulu/Contact.html">Contact</a>
+    </nav>
+    
+    
+    <button class="theme-toggle">Toggle Dark/Light Mode</button>
+</header>
+
+<main>
+    
+
+
+<!--about information that you want to include about your engine or team or company goes here-->
+
+<h1>About Us:</h1>
+<h2 id="aboutText">At Cthulu Formerly Kraken We Believe in Change for the better of industries even if this means taking leaps in technology to bring new innovations to the modern generation of gamers and creatives alike.</h2>
+<h3>Today more than ever, Game Engines are becoming ever more advanced and expansive, requiring larger teams to handle and thus it's been our goal to make C++ and with it, Game Development Easier to Approach for All-Ages.</h3>
+    
+</main>
+
+<footer>
+    <p>&copy; Website Scripted And Programmed by Mr.AsteRisk      ---       Copyright! --2024 Cthulu™ Game Engine</p>
+</footer>
+
+<script>
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    function insertLineBreaks(text, wordsPerLine) {
+        const words = text.split(' ');
+        let newText = '';
+        
+        for (let i = 0; i < words.length; i++) {
+            newText += words[i];
+            if ((i + 1) % wordsPerLine === 0 && i < words.length - 1) {
+                newText += '<br>';
+            } else {
+                newText += ' ';
+            }
+        }
+        
+        return newText;
+    }
+
+    const aboutTextElement = document.getElementById('aboutText');
+    aboutTextElement.innerHTML = insertLineBreaks(aboutTextElement.innerText, 5);
+</script>
+</body>
+</html>

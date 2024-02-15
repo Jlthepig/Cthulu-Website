@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cthulu.com/Engine</title>
+    <style>
+
+        /* Basic overall body styles go here*/
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Header Styles go here */
+        header {
+            background-image: linear-gradient(to right, #1ac6dd, #6700d5);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img.logo {
+            height: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px; /* Adds just 10 pixels of spacing between nav buttons */
+            padding: 7px 14px;
+            border-radius: 15px; /* Rounded corners */
+            transition: background-color 0.3s;
+            display: inline-block; /* Ensures to force spacing thus spacing and padding are always applied */
+        }
+
+        nav a:hover {
+            background-color: rgba(163, 0, 223, 0.614);
+        }
+
+        /* Dark Mode Button */
+        .theme-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: auto;
+            background-color: #555;
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode nav a {
+            color: #ddd;
+        }
+
+        .dark-mode header {
+            background-image: linear-gradient(to right, #555, #888);
+        }
+
+        .get-involved .github-link {
+            display: inline-block;
+            background-color: #1ac6dd;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-involved .github-link:hover {
+            background-color: #6700d5;
+        }
+
+    </style>
+
+    </style>
+</head>
+<body>
+
+<header>           <!-- add and replace your website logo image below here this would be the image for kraken.com-->
+    <img src="https://gcdnb.pbrd.co/images/uZ4mXriscaYW.png?o=1" alt="Logo" class="logo" onclick="window.location.href = 'https://example.com'">
+
+
+    
+     <!-- leave this area as is otherwise contact me first before changing if this seems to break and ill help-->
+     <nav>
+        <a href="/Cthulu/Home.html">Home</a>
+        <a href="/Cthulu/Download.html">Download</a>
+        <a href="/Cthulu/About.html">About</a>
+        <a href="/Cthulu/Contact.html">Contact</a>
+    </nav>
+    
+    
+    <button class="theme-toggle">Toggle Dark/Light Mode</button>
+</header>
+
+<main>
+    <h1>Welcome to Cthulu Engine</h1>
+    <p>Welcome to the forefront of game development innovation. Cthulu Engine is revolutionizing the way we create games, leveraging the power of C++ and OpenGL to bring you an intuitive game engine that's accessible to everyone. Whether you're a seasoned developer or someone who's never written a line of code, our engine is designed with you in mind.</p>
+
+    <p>Understanding that not everyone has the time or desire to learn programming, we've crafted Cthulu Engine for all ages. It's our mission to democratize game development, making it as easy and straightforward as possible. With Cthulu, your creativity is the only limit.</p>
+
+    <p>Introducing <strong>Octo</strong>, the offspring of Cthulu, designed to empower non-programmers to bring their game concepts to life with minimal effort. Octo is more than a tool; it's your gateway to developing games quickly and efficiently, requiring little to no programming knowledge. Currently in the planning stages, Octo promises to be a game-changer, simplifying the development process to ensure that anyone can create, innovate, and express their ideas through games.</p>
+
+    <p>Join us on this exciting journey and be part of the new era of game development with Cthulu Engine. Stay tuned for more updates on Octo, and get ready to unleash your potential.</p>
+    
+    <section class="community-support">
+        <h2>Community and Support</h2>
+        <p>At the heart of Cthulu Engine is a vibrant and supportive community. From novice game developers to industry veterans, our forums and social media channels are buzzing with creativity, collaboration, and guidance. Whether you're looking for advice on your first game project or ready to share your expertise, you'll find a welcoming space to connect and grow.</p>
+    
+        <p>Our dedicated support team and extensive documentation ensure you have all the resources you need to overcome any challenges. With tutorials ranging from basic setup to advanced game design techniques, we're here to support your development journey every step of the way.</p>
+    
+        <p>Stay engaged with regular updates, feature highlights, and developer spotlights through our newsletter. Join the Cthulu Engine community today and start creating the games of tomorrow.</p>
+    </section>
+
+    <section class="get-involved">
+        <h2>Get Involved in Development</h2>
+        <p>Join us in shaping the future of game development with the Cthulu Engine. As we continue to build and refine our platform, we invite developers, enthusiasts, and creators to contribute to its growth. Your insights, feedback, and contributions are invaluable as we push the boundaries of what's possible in game development.</p>
+    
+        <p>Access the engine's source code on GitHub to start contributing today. Whether it's submitting bug reports, suggesting new features, or directly improving the codebase, every contribution brings us closer to our vision of an accessible, powerful game engine for all.</p>
+    
+        <a href="https://github.com/LordManjush/Kraken-Engine" target="_blank" class="github-link">Contribute on GitHub</a>
+    
+    </section>    
+    
+</main>
+
+
+<footer>
+    <p>&copy; Website Scripted And Programmed by Mr.AsteRisk      ---       Copyright! --2024 Cthulu™ Game Engine</p>
+</footer>
+
+<script>
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+</body>
+</html>
