@@ -22,11 +22,28 @@
             align-items: center;
         }
 
-        header img.logo {
+        
+        header img.Headerlogo {
             height: 50px;
+            width: 50px;
             margin-right: 20px;
             cursor: pointer;
+            transition: width 0.5s, height 0.5s;
+           
+        
         }
+
+        header img.Headerlogo:hover {
+           
+           margin-right: 20px;
+           cursor: pointer;
+           height: 80px;
+           width: 80px
+          
+       
+       }
+
+        
 
         nav a {
             text-decoration: none;
@@ -97,16 +114,16 @@
 <body>
 
 <header>           <!-- add and replace your website logo image below here this would be the image for kraken.com-->
-    <img src="https://gcdnb.pbrd.co/images/uZ4mXriscaYW.png?o=1" alt="Logo" class="logo" onclick="window.location.href = 'https://example.com'">
+    <img src="C:\Cthulu-Website\images\HeaderLogo.png" alt="Logo" class="Headerlogo" :hover onclick="window.location.href = 'https://example.com'">
 
 
     
      <!-- leave this area as is otherwise contact me first before changing if this seems to break and ill help-->
      <nav>
-        <a href="/Cthulu/Home.html">Home</a>
-        <a href="/Cthulu/Download.html">Download</a>
-        <a href="/Cthulu/About.html">About</a>
-        <a href="/Cthulu/Contact.html">Contact</a>
+        <a href="C:\Cthulu-Website\home.html">Home</a>
+        <a href="C:\Cthulu-Website\Download.html">Download</a>
+        <a href="C:\Cthulu-Website\About.html">About</a>
+        <a href="C:\Cthulu-Website\Contact.html">Contact</a>
     </nav>
     
     
